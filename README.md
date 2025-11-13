@@ -1,17 +1,3 @@
-<p align="center">
-   <img src="book/src/images/logo_en.svg" alt="omegaosx-logo" width="620"><br>
-   A secure, fast, and general-purpose OS kernel written in Rust and compatible with Linux<br/>
-   <a href="https://github.com/omegaosx/omegaosx/actions/workflows/test_x86.yml"><img src="https://github.com/omegaosx/omegaosx/actions/workflows/test_x86.yml/badge.svg?event=push" alt="Test x86-64" style="max-width: 100%;"></a>
-   <a href="https://github.com/omegaosx/omegaosx/actions/workflows/test_riscv.yml"><img src="https://github.com/omegaosx/omegaosx/actions/workflows/test_riscv.yml/badge.svg?event=push" alt="Test riscv64" style="max-width: 100%;"></a>
-   <a href="https://github.com/omegaosx/omegaosx/actions/workflows/test_loongarch.yml"><img src="https://github.com/omegaosx/omegaosx/actions/workflows/test_loongarch.yml/badge.svg?event=push" alt="Test loongarch64" style="max-width: 100%;"></a>
-   <a href="https://github.com/omegaosx/omegaosx/actions/workflows/test_x86_tdx.yml"><img src="https://github.com/omegaosx/omegaosx/actions/workflows/test_x86_tdx.yml/badge.svg" alt="Test Intel TDX" style="max-width: 100%;"></a>
-   <a href="https://omegaosx.github.io/benchmark/x86-64/"><img src="https://github.com/omegaosx/omegaosx/actions/workflows/benchmark_x86.yml/badge.svg" alt="Benchmark x86-64" style="max-width: 100%;"></a>
-   <a href="https://omegaosx.github.io/benchmark/tdx/"><img src="https://github.com/omegaosx/omegaosx/actions/workflows/benchmark_x86_tdx.yml/badge.svg" alt="Benchmark Intel TDX" style="max-width: 100%;"></a>
-   <br/>
-</p>
-
-English | [中文版](README_CN.md) | [日本語](README_JP.md)
-
 ## Introducing OmegaOS W3.x
 
 OmegaOS W3.x is a _secure_, _fast_, and _general-purpose_ OS kernel that provides _Linux-compatible_ ABI. It can serve as a seamless replacement for Linux while enhancing _memory safety_ and _developer friendliness_.
