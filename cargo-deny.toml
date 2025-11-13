@@ -1,0 +1,9 @@
+[licenses]
+private = true
+allow = ["AGPL-3.0"]
+
+[licenses.deny]
+# Deny any licenses not explicitly allowed
+
+[audits]
+# Security audits

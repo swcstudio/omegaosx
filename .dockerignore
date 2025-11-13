@@ -1,0 +1,11 @@
+target/
+.git
+node_modules
+dist
+build
+coverage
+*.log
+docs/
+book/
+.bmad/
+.iflow/

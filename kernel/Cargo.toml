@@ -1,0 +1,85 @@
+[package]
+name = "kernel"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+align_ext = { path = "../osxtd/libs/align_ext" }
+omega-input = { path = "comps/input" }
+omega-block = { path = "comps/block" }
+omega-network = { path = "comps/network" }
+omega-console = { path = "comps/console" }
+omega-framebuffer = { path = "comps/framebuffer" }
+omega-softirq = { path = "comps/softirq" }
+omega-logger = { path = "comps/logger" }
+omega-mlsdisk = { path = "comps/mlsdisk" }
+omega-time = { path = "comps/time" }
+omega-virtio = { path = "comps/virtio" }
+omega-virtio-gpu = { path = "comps/virtio-gpu" }
+omega-rights = { path = "libs/omega-rights" }
+omega-systree = { path = "comps/systree" }
+omega-keyboard = { path = "comps/keyboard" }
+component = { path = "libs/comp-sys/component" }
+controlled = { path = "libs/comp-sys/controlled" }
+logo-ascii-art = { path = "libs/logo-ascii-art" }
+osxdk-frame-allocator = { path = "../osxdk/deps/frame-allocator" }
+osxdk-heap-allocator = { path = "../osxdk/deps/heap-allocator" }
+osxtd = { path = "../osxtd" }
+typeflags = { path = "libs/typeflags" }
+typeflags-util = { path = "libs/typeflags-util" }
+omega-rights-proc = { path = "libs/omega-rights-proc" }
+omega-util = { path = "libs/omega-util" }
+omega-bigtcp = { path = "libs/omega-bigtcp" }
+atomic-integer-wrapper = { path = "libs/atomic-integer-wrapper" }
+id-alloc = { path = "../osxtd/libs/id-alloc" }
+int-to-c-enum = { path = "libs/int-to-c-enum" }
+jhash = { path = "libs/jhash" }
+cpio-decoder = { path = "libs/cpio-decoder" }
+xarray = { path = "libs/xarray" }
+intrusive-collections = "0.9.5"
+paste = "1.0"
+time = { version = "0.3", default-features = false, features = ["alloc"] }
+
+# parse elf file
+xmas-elf = "0.10.0"
+# data-structures
+bitflags = "1.3"
+keyable-arc = { path = "libs/keyable-arc" }
+# unzip initramfs
+libflate = { version = "2", default-features = false }
+core2 = { version = "0.4", default-features = false, features = ["alloc"] }
+lending-iterator = "0.1.7"
+spin = "0.9.4"
+lru = "0.12.3"
+log = "0.4"
+bitvec = { version = "1.0", default-features = false, features = ["alloc"] }
+hashbrown = "0.14"
+rand = { version = "0.9.2", default-features = false, features = [
+    "small_rng",
+    "std_rng",
+] }
+# inherit-methods-macro = { git = "https://github.com/swcstudio/inherit-methods-macro", rev = "98f7e3e" }
+getset = "0.1.2"
+takeable = "0.2.2"
+cfg-if = "1.0"
+
+[target.x86_64-unknown-none.dependencies]
+tdx-guest = { version = "0.2.1", optional = true }
+
+[target.riscv64imac-unknown-none-elf.dependencies]
+riscv = { version = "0.11.1", features = ["s-mode"] }
+
+[target.loongarch64-unknown-none-softfloat.dependencies]
+loongArch64 = "0.2.5"
+
+[features]
+all = ["cvm_guest"]
+cvm_guest = ["dep:tdx-guest", "osxtd/cvm_guest", "omega-virtio/cvm_guest"]
+coverage = ["osxtd/coverage"]
+# By default we use the Sv48 address translation mode.
+riscv_sv39_mode = ["osxtd/riscv_sv39_mode"]
+
+[lints]
+workspace = true

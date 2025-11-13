@@ -1,0 +1,4 @@
+MemfdTest.Name
+MemfdTest.CanOpenFromProcfs
+MemfdTest.SealGrowPartialWriteTruncatedSamePage
+MemfdTest.MemfdMustBeWritableToModifySeals

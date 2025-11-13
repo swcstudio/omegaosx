@@ -1,0 +1,19 @@
+[package]
+name = "omega-block"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+spin = "0.9.4"
+osxtd = { path = "../../../osxtd" }
+align_ext = { path = "../../../osxtd/libs/align_ext" }
+int-to-c-enum = { path = "../../libs/int-to-c-enum" }
+omega-util = { path = "../../libs/omega-util" }
+component = { path = "../../libs/comp-sys/component" }
+log = "0.4"
+bitvec = { version = "1.0.1", default-features = false, features = ["alloc"] }
+
+[lints]
+workspace = true

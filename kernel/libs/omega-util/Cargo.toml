@@ -1,0 +1,17 @@
+[package]
+name = "omega-util"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+osxtd = { path = "../../../osxtd" }
+typeflags-util = { path = "../typeflags-util" }
+omega-rights-proc = { path = "../omega-rights-proc" }
+omega-rights = { path = "../omega-rights" }
+inherit-methods-macro = { git = "https://github.com/swcstudio/inherit-methods-macro", rev = "98f7e3e" }
+osdk-heap-allocator = { path = "../../../osxdk/deps/heap-allocator" }
+
+[lints]
+workspace = true

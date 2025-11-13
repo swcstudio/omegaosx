@@ -1,0 +1,16 @@
+[package]
+name = "osdk-frame-allocator"
+version = "0.16.1"
+edition = "2021"
+description = "The default buddy system frame allocator shipped with OSDK."
+license = "MPL-2.0"
+repository = "https://github.com/swcstudio/omegaosx"
+readme = "README.md"
+
+[dependencies]
+log = "0.4"
+osxtd = { version = "0.16.1", path = "../../../osxtd" }
+paste = "1.0.15"
+
+[lints]
+workspace = true

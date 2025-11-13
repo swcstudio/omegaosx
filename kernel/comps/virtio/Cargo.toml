@@ -1,0 +1,36 @@
+[package]
+name = "omega-virtio"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bitflags = "1.3"
+spin = "0.9.4"
+omega-input = { path = "../input" }
+omega-block = { path = "../block" }
+omega-network = { path = "../network" }
+omega-console = { path = "../console" }
+omega-util = { path = "../../libs/omega-util" }
+omega-rights = { path = "../../libs/omega-rights" }
+omega-bigtcp = { path = "../../libs/omega-bigtcp" }
+omega-pci = { path = "../pci" }
+omega-softirq = { path = "../softirq"}
+omega-systree = { path = "../systree" }
+id-alloc = { path = "../../../osxtd/libs/id-alloc" }
+typeflags-util = { path = "../../libs/typeflags-util" }
+osxtd = { path = "../../../osxtd" }
+component = { path = "../../libs/comp-sys/component" }
+log = "0.4"
+int-to-c-enum = { path = "../../libs/int-to-c-enum" }
+
+[target.x86_64-unknown-none.dependencies]
+tdx-guest = { version = "0.2.1", optional = true }
+
+[features]
+all = ["cvm_guest"]
+cvm_guest = ["dep:tdx-guest", "osxtd/cvm_guest"]
+
+[lints]
+workspace = true

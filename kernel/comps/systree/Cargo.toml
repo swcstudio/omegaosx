@@ -1,0 +1,17 @@
+[package]
+name = "omega-systree"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bitflags = "2.5"
+osxtd = { path = "../../../osxtd" }
+component = { path = "../../libs/comp-sys/component" }
+omega-util = { path = "../../libs/omega-util" }
+inherit-methods-macro = { git = "https://github.com/swcstudio/inherit-methods-macro", rev = "98f7e3e"}
+spin = "0.9"
+
+[lints]
+workspace = true

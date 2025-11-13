@@ -1,0 +1,13 @@
+[package]
+name = "omega-virtio-gpu"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+component = { path = "../../libs/comp-sys/component" }
+controlled = { path = "../../libs/comp-sys/controlled" }
+osxtd = { path = "../../../osxtd" }
+spin = "0.9.4"
+bitflags = "1.3"
+intrusive-collections = "0.9.5"
+log = "0.4"

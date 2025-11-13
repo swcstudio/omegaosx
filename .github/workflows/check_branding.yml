@@ -1,0 +1,82 @@
+name: Check Branding Consistency
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  check-branding:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check for unwanted Asterinas references
+      run: |
+        echo "Checking for unwanted 'Asterinas' references that should be rebranded to OmegaOS W3.x..."
+        
+        # Search for "Asterinas" references but exclude allowed patterns
+        UNWANTED_REFERENCES=$(grep -r -i "asterinas" . \
+          --exclude-dir=.git \
+          --exclude-dir=target \
+          --exclude-dir=build \
+          --exclude="*.lock" \
+          --exclude="*.svg" \
+          --exclude="*.png" \
+          --exclude="*.jpg" \
+          --exclude="*.ico" \
+          --exclude="*.yaml" \
+          --exclude="*.yml" \
+          --exclude="Cargo.lock" \
+          --exclude="*.bin" \
+          --exclude="*.o" \
+          --exclude="*.so" \
+          | grep -v -E "(https?://[^[:space:]]*asterinas[^[:space:]]*|docker\.io/asterinas|ghcr\.io/asterinas)" \
+          | grep -v -E "(github\.com/asterinas/asterinas)" \
+          || true)
+        
+        if [ -n "$UNWANTED_REFERENCES" ]; then
+          echo "❌ Found unwanted 'Asterinas' references that should be rebranded:"
+          echo "$UNWANTED_REFERENCES"
+          echo ""
+          echo "Please update these references to use 'OmegaOS W3.x' or 'omegaosx' as appropriate:"
+          echo "- Use 'OmegaOS W3.x' for prose and documentation"
+          echo "- Use 'omegaosx' for identifiers, paths, and code"
+          echo ""
+          echo "Allowed exceptions (will not be flagged):"
+          echo "- URLs pointing to upstream asterinas repositories"
+          echo "- Docker image references (docker.io/asterinas, ghcr.io/asterinas)"
+          echo "- GitHub repository references (github.com/asterinas/asterinas)"
+          exit 1
+        else
+          echo "✅ No unwanted 'Asterinas' references found. Branding consistency check passed!"
+        fi
+    
+    - name: Check for proper rebranding patterns
+      run: |
+        echo "Checking for proper OmegaOS W3.x branding patterns..."
+        
+        # Check that key files use proper branding
+        MISSING_BRANDING=0
+        
+        # Check main README
+        if grep -q -i "asterinas" README.md && ! grep -q "OmegaOS W3.x" README.md; then
+          echo "❌ README.md contains 'Asterinas' but not 'OmegaOS W3.x' - may need rebranding"
+          MISSING_BRANDING=1
+        fi
+        
+        # Check root documentation files
+        for file in docs/*.md; do
+          if [ -f "$file" ] && grep -q -i "asterinas" "$file" && ! grep -q "OmegaOS W3.x" "$file"; then
+            echo "❌ $file contains 'Asterinas' but not 'OmegaOS W3.x' - may need rebranding"
+            MISSING_BRANDING=1
+          fi
+        done
+        
+        if [ $MISSING_BRANDING -eq 0 ]; then
+          echo "✅ Proper OmegaOS W3.x branding patterns found!"
+        else
+          echo "⚠️  Some files may need rebranding attention"
+          exit 1
+        fi
