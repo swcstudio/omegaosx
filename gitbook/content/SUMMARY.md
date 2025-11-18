@@ -3,6 +3,7 @@
 - [Introduction](introduction.md)
 - [Getting Started](getting_started.md)
 - [WEB3.ARL Integration](web3-arl.md)
+- [Desktop GUI Virtualization](desktop-gui-virtualization.md)
 
 
 # OmegaOS W3.x Kernel
