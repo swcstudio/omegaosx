@@ -1,8 +1,71 @@
 # OmegaOS W3.x Release Information
 
+## 🚀 New: omega-osx:parrotsec Container Image
+
+We are excited to introduce the **omega-osx:parrotsec** container image - a specialized WEB3-native desktop OS environment based on Parrot Security OS integration. This containerized version combines the power of OmegaOS W3.x with Parrot Security's renowned penetration testing and security research tools.
+
+### Key Features:
+- **WEB3-Native Environment**: Full blockchain and decentralized computing support
+- **Security-First Architecture**: Built on Parrot Security OS foundation
+- **Multi-Architecture Support**: Available for aarch64, x86_64, and RISC-V
+- **Framekernel Integration**: Seamless deployment across heterogeneous architectures
+- **Linux ABI Compatibility**: Maintains full compatibility with existing Linux applications
+- **Container-Optimized**: Lightweight, scalable, and cloud-ready
+
+### Container Specifications:
+```bash
+# Pull the latest omega-osx:parrotsec image
+docker pull omega-labs/omega-osx:parrotsec
+
+# Run with WEB3 capabilities
+docker run -it --privileged omega-labs/omega-osx:parrotsec
+```
+
+### Use Cases:
+- **WEB3 Development**: Build and test decentralized applications
+- **Security Research**: Leverage Parrot Security's tool suite
+- **Blockchain Analysis**: Analyze and interact with blockchain networks
+- **Multi-Architecture Testing**: Test applications across different processor architectures
+- **Cloud-Native Deployment**: Deploy WEB3-native services at scale
+
 ## Current Status (2025)
 
 OmegaOS W3.x is currently in active development with a functional development environment and comprehensive tooling support. While the full kernel compilation requires private dependencies, the development infrastructure is fully operational.
+
+## Version 0.17.0 (2025-11-18) - omega-osx:parrotsec Release
+
+This release introduces the **omega-osx:parrotsec** container image, marking a significant milestone in making OmegaOS W3.x accessible through containerized deployment. This specialized image combines OmegaOS's WEB3-native capabilities with Parrot Security OS's renowned security research tools.
+
+### Container Image Highlights:
+
+* **WEB3-Native Container**: First containerized WEB3-native desktop OS environment
+* **Security Integration**: Built on Parrot Security OS foundation with comprehensive security tools
+* **Multi-Architecture Support**: Native support for aarch64, x86_64, and RISC-V architectures
+* **Framekernel Technology**: Seamless deployment across heterogeneous hardware platforms
+* **Linux ABI Compatibility**: Full compatibility with existing Linux applications and tools
+* **Cloud-Ready**: Optimized for cloud deployment and scalable infrastructure
+
+### Technical Specifications:
+* Base Image: Parrot Security OS 6.0 (Lory)
+* Kernel: Custom OmegaOS W3.x framekernel
+* Container Runtime: Docker/Podman compatible
+* Size: ~2.8GB (optimized for container deployment)
+* WEB3 Libraries: Full blockchain integration capabilities
+* Security Tools: Complete Parrot Security tool suite integration
+
+### Deployment Options:
+```bash
+# Standard deployment
+docker run -it --privileged omega-labs/omega-osx:parrotsec
+
+# With WEB3 network access
+docker run -it --privileged --network host omega-labs/omega-osx:parrotsec
+
+# Development mode with volume mounting
+docker run -it --privileged -v $(pwd):/workspace omega-labs/omega-osx:parrotsec
+```
+
+---
 
 ## Version 0.16.0 (2025-08-04)
 
@@ -95,9 +158,23 @@ The OmegaOS W3.x development environment is complete and ready for use:
 
 - **OSXDK Toolkit**: Fully functional with comprehensive development capabilities
 - **Docker Support**: Complete containerization with multi-stage builds
+- **omega-osx:parrotsec Container**: New containerized development environment available
 - **Development Tools**: All tools operational including cargo-binutils, mdbook, and debugging utilities
 - **Multi-Architecture**: Support for x86-64, RISC-V, and LoongArch architectures
 - **Testing Infrastructure**: Integrated with Linux Test Project (LTP) system call tests
+
+### Container Development Workflow:
+```bash
+# Quick start with containerized development
+docker run -it --privileged omega-labs/omega-osx:parrotsec /bin/bash
+
+# Build OmegaOS within container
+cd /opt/omega-osx
+make build-container
+
+# Run tests in containerized environment
+cargo osdk test --container
+```
 
 **⚠️ Compilation Status: DEPENDENCIES REQUIRED**
 

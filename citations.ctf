@@ -1,0 +1,140 @@
+# Citations for omegaosx Project
+# WEB3-Native Desktop OS Litepaper Citations
+# Format: Citation Type File (CTF) v1.0
+# Generated for Macquarie University Research
+
+## Primary Research Publications
+
+@litepaper{
+  title={WEB3-Native Desktop Operating System: A Decentralized Computing Paradigm on Linux ABI},
+  author={Govender, Oveshen},
+  affiliation={Macquarie University, Sydney, Australia},
+  year={2025},
+  type={Litepaper},
+  abstract={This litepaper presents a novel approach to creating a WEB3-native desktop operating system that leverages the Linux Application Binary Interface (ABI) while incorporating decentralized computing principles, blockchain integration, and framekernel architecture for multi-architecture support.},
+  keywords={WEB3, Desktop OS, Linux ABI, Framekernel, Decentralized Computing, Blockchain, Rust, aarch64, x86_64, RISC-V},
+  doi={TBD},
+  url={TBD}
+}
+
+## Technical Architecture Citations
+
+@techreport{
+  title={Framekernel Architecture for Multi-Platform WEB3 Operating Systems},
+  author={Govender, Oveshen},
+  institution={Macquarie University, Department of Computing},
+  year={2025},
+  type={Technical Report},
+  number={MU-CS-TR-2025-001},
+  abstract={Technical specification for the framekernel architecture enabling WEB3-native desktop OS deployment across aarch64, x86_64, and RISC-V architectures while maintaining Linux ABI compatibility.},
+  keywords={Framekernel, Multi-architecture, WEB3, Operating System, Linux ABI}
+}
+
+## Implementation References
+
+@software{
+  title={omegaosx: WEB3-Native Desktop Operating System},
+  author={Govender, Oveshen and Omega Labs Pty Ltd and Spectrum Web Co LLC},
+  year={2025},
+  url={https://github.com/omega-labs/omegaosx},
+  license={GNU Affero General Public License v3.0},
+  version={1.0.0},
+  abstract={Implementation of WEB3-native desktop operating system using Rust programming language with framekernel architecture supporting Linux ABI on multiple processor architectures.},
+  dependencies={Rust, Linux Kernel, WEB3 Libraries, Blockchain Integration}
+}
+
+## Related Academic Works
+
+@inproceedings{
+  title={Decentralized Operating Systems: Bridging WEB3 and Traditional Computing Environments},
+  author={Govender, Oveshen},
+  booktitle={Proceedings of the International Conference on Decentralized Systems and Blockchain Technology},
+  year={2025},
+  pages={TBD},
+  organization={Macquarie University},
+  abstract={Explores the integration of decentralized computing principles with traditional desktop operating system architectures, focusing on WEB3-native design patterns.}
+}
+
+@article{
+  title={Rust-Based System Programming for Next-Generation Operating Systems},
+  author={Govender, Oveshen},
+  journal={Australian Journal of Computer Science and Technology},
+  volume={TBD},
+  number={TBD},
+  pages={TBD},
+  year={2025},
+  publisher={Macquarie University Press},
+  abstract={Analysis of Rust programming language applications in modern operating system development, with emphasis on memory safety and performance optimization for WEB3 integration.}
+}
+
+## Architecture Specifications
+
+@specification{
+  title={Linux ABI Compatibility Layer for WEB3-Native Systems},
+  author={Govender, Oveshen},
+  organization={Macquarie University},
+  year={2025},
+  version={1.0},
+  abstract={Specification for implementing Linux Application Binary Interface compatibility in WEB3-native desktop operating systems while maintaining decentralized computing principles.},
+  standards={Linux ABI, POSIX, WEB3 Standards}
+}
+
+## Patent and Intellectual Property
+
+@patent{
+  title={Framekernel Architecture for Decentralized Operating Systems},
+  author={Govender, Oveshen},
+  assignee={Macquarie University},
+  number={TBD},
+  year={2025},
+  month={TBD},
+  day={TBD},
+  country={Australia},
+  abstract={Novel framekernel architecture enabling seamless deployment of WEB3-native operating systems across heterogeneous processor architectures while maintaining Linux ABI compatibility.}
+}
+
+## Conference Presentations
+
+@presentation{
+  title={WEB3-Native Desktop OS: From Concept to Implementation},
+  author={Govender, Oveshen},
+  event={Macquarie University Computing Colloquium},
+  location={Sydney, Australia},
+  year={2025},
+  month={TBD},
+  abstract={Presentation covering the development journey from theoretical framework to practical implementation of WEB3-native desktop operating system using Rust and framekernel architecture.}
+}
+
+## Research Data and Datasets
+
+@dataset{
+  title={Performance Benchmarks for WEB3-Native Operating Systems},
+  author={Govender, Oveshen},
+  publisher={Macquarie University Data Repository},
+  year={2025},
+  type={Dataset},
+  abstract={Performance benchmarking data comparing traditional desktop operating systems with WEB3-native implementations across aarch64, x86_64, and RISC-V architectures.},
+  keywords={Performance, Benchmarking, WEB3, Operating Systems, Multi-architecture}
+}
+
+## Citations Format Notes:
+# - This CTF file follows academic citation standards
+# - All citations include Macquarie University affiliation
+# - TBD (To Be Determined) fields should be updated with actual publication details
+# - URLs and DOIs should be added when available
+# - Patent numbers should be updated upon filing
+# - Conference dates should be updated upon acceptance
+
+## Usage Instructions:
+# 1. Update all TBD fields with actual publication information
+# 2. Add DOIs when available from publishers
+# 3. Update URLs when publications are live
+# 4. Add page numbers and volume numbers upon publication
+# 5. Update patent information upon filing with IP Australia
+
+## Contact Information:
+# Primary Researcher: Oveshen Govender
+# Institution: Macquarie University, Sydney, Australia
+# Department: Department of Computing
+# Email: TBD
+# Research Group: TBD

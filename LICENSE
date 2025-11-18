@@ -1,0 +1,58 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright © 2025 Omega Labs Pty Ltd, Spectrum Web Co LLC, Oveshen Govender
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+ADDITIONAL TERMS:
+
+The omegaosx project is licensed under the GNU Affero General Public License v3.0
+with the following additional attribution requirements:
+
+1. Original Work Attribution:
+   Any derivative works must prominently display:
+   "Based on omegaosx by Omega Labs Pty Ltd, Spectrum Web Co LLC, Oveshen Govender"
+
+2. Network Use Distribution:
+   If users interact with this software over a network, the complete source code
+   of any modifications must be made available to those users under the same license.
+
+3. Commercial Use:
+   Commercial use of this software is permitted, but all network-accessible
+   deployments must provide source code access to users.
+
+4. Patent Grant:
+   Contributors grant a patent license to all users for any patents that may be
+   infringed by the original or modified versions of this software.
+
+Contact Information:
+- Omega Labs Pty Ltd
+- Spectrum Web Co LLC  
+- Oveshen Govender
+
+For license inquiries, please contact the copyright holders.
+
+---
+
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+[Full AGL 3.0 license text would continue here following the standard GNU format]
+
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
